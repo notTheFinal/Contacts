@@ -3,6 +3,8 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,6 +34,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="qmZ-Cv-a29" kind="show" id="k0w-VN-ype"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,11 +50,66 @@
             </objects>
             <point key="canvasLocation" x="1033.3333333333335" y="142.63392857142856"/>
         </scene>
-        <!--Item-->
+        <!--Contact Details View Controller-->
+        <scene sceneID="HjI-z9-Ceb">
+            <objects>
+                <viewController id="qmZ-Cv-a29" customClass="ContactDetailsViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yV9-CY-ebc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Murphy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tzt-m9-c7V">
+                                <rect key="frame" x="16" y="44" width="202.5" height="39.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sW9-Vk-W8z">
+                                <rect key="frame" x="16" y="137" width="175.5" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone: 654357" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8W-ro-AKk">
+                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: www.ddd.ru" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qw-np-IV3">
+                                        <rect key="frame" x="0.0" y="56.5" width="175.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="R1h-nt-vSr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R1h-nt-vSr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Tzt-m9-c7V" secondAttribute="trailing" constant="101" id="14s-Qs-L3W"/>
+                            <constraint firstItem="Tzt-m9-c7V" firstAttribute="top" secondItem="R1h-nt-vSr" secondAttribute="top" id="19U-yc-ALo"/>
+                            <constraint firstItem="Tzt-m9-c7V" firstAttribute="leading" secondItem="R1h-nt-vSr" secondAttribute="leading" constant="16" id="Uzz-Gv-kc3"/>
+                            <constraint firstItem="sW9-Vk-W8z" firstAttribute="leading" secondItem="R1h-nt-vSr" secondAttribute="leading" constant="16" id="dMB-uq-m54"/>
+                            <constraint firstItem="sW9-Vk-W8z" firstAttribute="top" secondItem="Tzt-m9-c7V" secondAttribute="bottom" constant="53.5" id="ygS-Xy-D1E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="jQl-jv-sOa"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="2Qw-np-IV3" id="CHF-5X-AX6"/>
+                        <outlet property="fullNameLabel" destination="Tzt-m9-c7V" id="w6N-OD-L6t"/>
+                        <outlet property="phoneNumberLabel" destination="t8W-ro-AKk" id="XxY-ci-LZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hi3-Ni-sbs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="143"/>
+        </scene>
+        <!--Contact-->
         <scene sceneID="tnB-eq-9ji">
             <objects>
                 <navigationController id="n0h-kd-nZU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1wg-Bg-Ete"/>
+                    <tabBarItem key="tabBarItem" title="Contact" id="1wg-Bg-Ete">
+                        <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8YT-h9-emK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -62,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="143"/>
         </scene>
-        <!--Item-->
+        <!--Person-->
         <scene sceneID="iVM-5b-6ap">
             <objects>
                 <tableViewController id="7pu-i3-JE3" sceneMemberID="viewController">
@@ -85,7 +145,9 @@
                             <outlet property="delegate" destination="7pu-i3-JE3" id="acR-if-p4R"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="eX6-nw-PJI"/>
+                    <tabBarItem key="tabBarItem" title="Person" id="eX6-nw-PJI">
+                        <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1S-Kg-vZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,6 +159,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AJ6-XD-C9u" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uzx-dP-iO2">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -111,6 +174,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
