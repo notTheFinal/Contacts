@@ -16,6 +16,8 @@
 		A9053488282629F900F18679 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9053487282629F900F18679 /* DataManager.swift */; };
 		A905348A2826426A00F18679 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90534892826426A00F18679 /* ContactsViewController.swift */; };
 		A905348E2828FC8300F18679 /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A905348D2828FC8300F18679 /* ContactDetailsViewController.swift */; };
+		A9053490282BAD4300F18679 /* SecondContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A905348F282BAD4200F18679 /* SecondContactsViewController.swift */; };
+		A9053493282BB22600F18679 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9053492282BB22600F18679 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A9053487282629F900F18679 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A90534892826426A00F18679 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A905348D2828FC8300F18679 /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		A905348F282BAD4200F18679 /* SecondContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondContactsViewController.swift; sourceTree = "<group>"; };
+		A9053492282BB22600F18679 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				A9053487282629F900F18679 /* DataManager.swift */,
 				A90534892826426A00F18679 /* ContactsViewController.swift */,
 				A905348D2828FC8300F18679 /* ContactDetailsViewController.swift */,
+				A905348F282BAD4200F18679 /* SecondContactsViewController.swift */,
+				A9053492282BB22600F18679 /* TabBarViewController.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9053493282BB22600F18679 /* TabBarViewController.swift in Sources */,
+				A9053490282BAD4300F18679 /* SecondContactsViewController.swift in Sources */,
 				A9053488282629F900F18679 /* DataManager.swift in Sources */,
 				A905347028255AF600F18679 /* AppDelegate.swift in Sources */,
 				A905348E2828FC8300F18679 /* ContactDetailsViewController.swift in Sources */,

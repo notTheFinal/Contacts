@@ -103,11 +103,11 @@
             </objects>
             <point key="canvasLocation" x="1845" y="143"/>
         </scene>
-        <!--Contact-->
+        <!--Contacts-->
         <scene sceneID="tnB-eq-9ji">
             <objects>
                 <navigationController id="n0h-kd-nZU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Contact" id="1wg-Bg-Ete">
+                    <tabBarItem key="tabBarItem" title="Contacts" id="1wg-Bg-Ete">
                         <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8YT-h9-emK">
@@ -122,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="143"/>
         </scene>
-        <!--Person-->
+        <!--Contacts-->
         <scene sceneID="iVM-5b-6ap">
             <objects>
                 <tableViewController id="7pu-i3-JE3" sceneMemberID="viewController">
@@ -131,12 +131,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O2I-lJ-it7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="xDp-Rr-3Xi" style="IBUITableViewCellStyleDefault" id="O2I-lJ-it7">
                                 <rect key="frame" x="0.0" y="44.5" width="320" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O2I-lJ-it7" id="HFA-MS-Y0I">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xDp-Rr-3Xi">
+                                            <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -145,7 +154,7 @@
                             <outlet property="delegate" destination="7pu-i3-JE3" id="acR-if-p4R"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Person" id="eX6-nw-PJI">
+                    <tabBarItem key="tabBarItem" title="Contacts" id="eX6-nw-PJI">
                         <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                 </tableViewController>
@@ -153,10 +162,10 @@
             </objects>
             <point key="canvasLocation" x="279" y="943"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="NQX-VK-hLS">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AJ6-XD-C9u" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AJ6-XD-C9u" customClass="TabBarViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uzx-dP-iO2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

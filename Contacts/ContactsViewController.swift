@@ -9,7 +9,7 @@ import UIKit
 
 class ContactsViewController: UITableViewController {
 
-    private var contacts = Person.getPersons()
+    var contacts: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +33,6 @@ class ContactsViewController: UITableViewController {
         return cell
     }
 
-
-  
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +42,5 @@ class ContactsViewController: UITableViewController {
         contactDetailsVC.person = contacts[indexPath.row]
         
     }
-
-
+    
 }
