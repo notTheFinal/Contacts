@@ -13,7 +13,8 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         let contacts = Person.getPersons()
-        let contactsVC = viewControllers?.first as! ContactsViewController
+        let navigationController = viewControllers?.first as! UINavigationController
+        let contactsVC = navigationController.topViewController as! ContactsViewController
         let secondContactsVC = viewControllers?.last as! SecondContactsViewController
         
         contactsVC.contacts = contacts
